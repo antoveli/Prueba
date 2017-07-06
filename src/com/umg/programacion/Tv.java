@@ -79,16 +79,3 @@ public class Tv {
         return estado;
     }
 }
-
-
-
-/*
-        for (int i = 0; i < canal.size(); i++) {
-            String res[] = canal.get(i).split(",");
-            String numero = res[0];
-            String nombre = res[1].trim();
-
-            if (numero.equals(s) && nombre.equals("Dibujos Animados") ) {
-                estado=true;
-            }
-        }*/
