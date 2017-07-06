@@ -10,35 +10,47 @@ import java.util.ArrayList;
  */
 public class Canal {
     private int numero;
-    private ArrayList<String> tematica = new ArrayList<>();
+    private String tematica;
     private boolean permitidoMenores;
 
-    private ArrayList<Canal> canales;
-
     public Canal() {
-        canales = new ArrayList<>();
     }
 
-    public void listadoCanales() {
-        tematica.add("1, Deportes, Permitido a menores");
-        tematica.add("2, Dibujos Animados, Permitido a menores");
-        tematica.add("3, Series, Permitido a menores");
+    public Canal(int numero, String tematica, boolean permitidoMenores) {
+        this.numero = numero;
+        this.tematica = tematica;
+        this.permitidoMenores = permitidoMenores;
     }
 
-    public boolean devolverCanal(String s) {
-        boolean estado=false;
-
-        for (int i = 0; i < tematica.size(); i++) {
-            String res[] = tematica.get(i).split(",");
-            String numero = res[0];
-            String nombre = res[1].trim();
-
-            if (numero.equals(s) && nombre.equals("Dibujos Animados") ) {
-                estado=true;
-            }
-        }
-
-        return estado;
+    public int getNumero() {
+        return numero;
     }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getTematica() {
+        return tematica;
+    }
+
+    public void setTematica(String tematica) {
+        this.tematica = tematica;
+    }
+
+    public boolean isPermitidoMenores() {
+        return permitidoMenores;
+    }
+
+    public void setPermitidoMenores(boolean permitidoMenores) {
+        this.permitidoMenores = permitidoMenores;
+    }
+
+
+
+
+
+
+
 
 }
