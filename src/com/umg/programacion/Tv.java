@@ -50,4 +50,5 @@ private boolean esPlano;
     public void setEsPlano(boolean esPlano) {
         this.esPlano = esPlano;
     }
+
 }
